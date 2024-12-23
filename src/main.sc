@@ -15,18 +15,32 @@ theme: /
                     city: $parseTree._City.name
                 }
             });
-
+    
         if: $temp.response.isOk
             # Если данные получены успешно
             if: $temp.response.data.length > 0
                 script:
-                    # Формирование списка экскурсий
-                    $temp.excursionsList = "";
+                    # Инициализируем массив для хранения экскурсий
+                    $temp.excursionsList = [];
+                    
+                    # Перебираем данные и сохраняем каждую экскурсию в массив
                     for (var i = 0; i < $temp.response.data.length; i++) {
                         var excursion = $temp.response.data[i];
-                        $temp.excursionsList += (i + 1) + ". " + excursion.name + " - " + excursion.description + " (" + excursion.price + " руб.)\n";
+                        $temp.excursionsList.push({
+                            name: excursion.name,
+                            description: excursion.description,
+                            price: excursion.price
+                        });
                     }
-                a: Вот экскурсии в городе {{$parseTree._City.name}}:\n{{ $temp.excursionsList }}
+    
+                    # Формируем строку для вывода построчно
+                    $temp.excursionsOutput = "";
+                    for (var i = 0; i < $temp.excursionsList.length; i++) {
+                        var excursion = $temp.excursionsList[i];
+                        $temp.excursionsOutput += (i + 1) + ". " + excursion.name + " - " + excursion.description + " (" + excursion.price + " руб.)\n";
+                    }
+    
+                a: Вот экскурсии в городе {{$parseTree._City.name}}:\n{{ $temp.excursionsOutput }}
             else:
                 a: "В городе {{$parseTree._City.name}} экскурсий не найдено."
         else:
