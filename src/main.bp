@@ -1,8 +1,8 @@
 {
   "positions" : [ {
     "id" : "/Start",
-    "x" : 378,
-    "y" : 699
+    "x" : -171,
+    "y" : 6
   }, {
     "id" : "/Hello",
     "x" : 263,
@@ -28,5 +28,22 @@
     "name" : "Пример",
     "x" : 290,
     "y" : 640
+  }, {
+    "id" : "/CityExcursions",
+    "x" : 746,
+    "y" : -335
+  }, {
+    "id" : "/CatchAll",
+    "x" : 589,
+    "y" : 11
+  }, {
+    "id" : "/ExcursionDetails",
+    "x" : 101,
+    "y" : -161
+  }, {
+    "id" : "/randomExcursions",
+    "name" : "randomExcursions",
+    "x" : 257,
+    "y" : 3
   } ]
 }

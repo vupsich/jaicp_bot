@@ -1,11 +1,16 @@
 require: city/city.sc
     module = sys.zb-common
+require: patterns.sc
 
 theme: /
     state: Start
         q!: $regex</start>
-        a: Начнём.
-
+        q!: * $hello *
+        random:
+            a: Добрый день! Я помогу вам найти экскурсию.
+            a: Здравствуйте! Я помогу вам с экскурсией!
+            a: Приветствую! Я могу помочь вам подобрать экскурсию.
+    
     state: CityExcursions
         q!: * какие экскурсии есть [в] $City *
         script:
@@ -44,3 +49,12 @@ theme: /
         else:
             a: "Не удалось получить список экскурсий. Попробуйте позже."
 
+            
+            
+    state: CatchAll || noContext = true
+        event!: noMatch
+        random:
+            a: Извините, я не понимаю. Переформулируйте, пожалуйста.
+            a: Простите, кажется, я не понял. Задайте свой вопрос иначе.
+            
+            
