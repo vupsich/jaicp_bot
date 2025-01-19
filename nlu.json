@@ -44,9 +44,36 @@
       "refs" : [ ]
     },
     "priority" : 0
+  }, {
+    "path" : "/Новый интент",
+    "enabled" : true,
+    "shared" : false,
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "priority" : 0
   } ],
-  "entities" : [ ],
-  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
+  "entities" : [ {
+    "entity" : {
+      "name" : "Образование",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ ],
+      "value" : ""
+    } ]
+  } ],
+  "enabledSystemEntities" : [ "pymorphy.numb", "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url", "zb.number" ],
   "spellerDictionary" : [ ],
   "systemEntities" : [ {
     "name" : "mystem.geo",
@@ -71,7 +98,7 @@
     "enabled" : false
   }, {
     "name" : "pymorphy.numb",
-    "enabled" : false
+    "enabled" : true
   }, {
     "name" : "pymorphy.intg",
     "enabled" : false
@@ -149,7 +176,7 @@
     "enabled" : false
   }, {
     "name" : "zb.number",
-    "enabled" : false
+    "enabled" : true
   } ],
   "faq" : [ ],
   "skills" : [ ]

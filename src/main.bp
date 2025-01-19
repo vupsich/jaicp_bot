@@ -45,5 +45,44 @@
     "name" : "randomExcursions",
     "x" : 257,
     "y" : 3
+  }, {
+    "id" : "/Greeting",
+    "x" : -609,
+    "y" : 59
+  }, {
+    "id" : "/CatchAll",
+    "name" : "CatchAll",
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/сatchAll",
+    "name" : "сatchAll",
+    "x" : 442,
+    "y" : -219
+  }, {
+    "id" : "/Confirm",
+    "x" : 1050,
+    "y" : 794
+  }, {
+    "id" : "/getParticipant",
+    "x" : 605,
+    "y" : 592
+  }, {
+    "id" : "/getBudget",
+    "x" : 190,
+    "y" : 422
+  }, {
+    "id" : "/getCity",
+    "x" : -217,
+    "y" : 229
+  }, {
+    "id" : "/getCity/catchCity",
+    "x" : 290,
+    "y" : 770
+  }, {
+    "id" : "/NewState",
+    "name" : "NewState",
+    "x" : -409,
+    "y" : 795
   } ]
 }
