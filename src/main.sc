@@ -171,16 +171,6 @@ theme: /
         a: Мы подобрали для вас такую экскурсию:\n\n{{$temp.response.data.excursion_name}} – {{$temp.response.data.excursion_description}}\n\nЦена: {{$temp.response.data.price}}\nКоличество человек: {{$temp.response.data.max_participants}}\n\nДата: {{$temp.startDateFormatted}} – {{$temp.endDateFormatted}}\n\nЛокация: {{$temp.response.data.location}}\n\nЭкскурсовод: {{$temp.response.data.organizer_name}}
         
         a: {{$temp.response.data.excursion_id}}
-        go!: /GetPhoneNumber
-        
-    state: GetPhoneNumber
-        a: 123
-        event!: telegramSendContact
-        script:
-            $client.phoneNumber = $request.rawRequest.message.contact.phone_number;
-        a: Спасибо! Наш менеджер свяжется с вами по номеру {{$client.phoneNumber}}.
-
-
 
     state: сatchAll
         event!: noMatch
