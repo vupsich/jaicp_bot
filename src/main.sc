@@ -175,6 +175,7 @@ theme: /
         
     state: GetPhoneNumber
         q!: бъъкбъъу
+        a: 123
         event!: telegramSendContact
         script:
             $client.phoneNumber = $request.rawRequest.message.contact.phone_number;
