@@ -137,9 +137,9 @@ theme: /
                 "http://217.114.7.99/filter_excursions/", 
                 {
                     body: {
-                        "city": "Иркутск",
-                        "price": 8000,
-                        "max_participants": 11
+                        "city": $session.city,
+                        "price": $session.budget,
+                        "max_participants": $session.max_participants
                     },
                     headers: {
                         "Content-Type": "application/json"
