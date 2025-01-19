@@ -168,7 +168,7 @@ theme: /
                 endDate.getHours() + ":" + 
                 (endDate.getMinutes() < 10 ? "0" : "") + endDate.getMinutes();
             
-        a: Мы подобрали для вас такую экскурсию:\n\n{{$temp.response.data.excursion_name}}\n – {{$temp.response.data.excursion_description}}\n\nЦена: {{$temp.response.data.price}}\nКоличество человек: {{$temp.response.data.max_participants}}\n\nДата: {{$temp.startDateFormatted}} – {{$temp.endDateFormatted}}\n\nЛокация: {{$temp.response.data.location}}\n\nЭкскурсовод: {{$temp.response.data.organizer_name}}
+        a: Мы подобрали для вас такую экскурсию:\n\n{{$temp.response.data.excursion_name}} – {{$temp.response.data.excursion_description}}\n\nЦена: {{$temp.response.data.price}}\nКоличество человек: {{$temp.response.data.max_participants}}\n\nДата: {{$temp.startDateFormatted}} – {{$temp.endDateFormatted}}\n\nЛокация: {{$temp.response.data.location}}\n\nЭкскурсовод: {{$temp.response.data.organizer_name}}
 
         a: {{$temp.response.data.excursion_id}}
 
